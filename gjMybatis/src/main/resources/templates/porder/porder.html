@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/st1.css">
+</head>
+<body>
+<div id="header">
+		<div id="title">商品選購</div>
+</div>
+<div id="navigater"></div>
+<div id="content">
+		<div id="pic">
+				<form action="/porder/add" method="post">
+					<table width=450 border=1>
+							<tr height=40>
+									<td colspan=3 align=center>
+									<h3><p th:text="${session.M.name}"></p></h3>
+							<tr height=150>
+									<td>
+									商品A<br>
+									<img alt="" src="/pic/1.jpg">
+									100元 <input type="text" name="A" size=6>
+
+									<td>
+									商品B<br>
+									<img alt="" src="/pic/2.jpg">
+									120元 <input type="text" name="B" size=6>
+
+									<td>
+									商品C<br>
+									<img alt="" src="/pic/3.jpg">
+									150元 <input type="text" name="C" size=6>
+							<tr height=20>
+									<td colspan=3 align=center>
+									<input type="submit" value="ok">			
+
+					</table>
+
+				</form>
+		</div>
+</div>
+<div id="footer"></div>
+
+</body>
+</html>

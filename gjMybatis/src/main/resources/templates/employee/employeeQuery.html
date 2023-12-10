@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/st1.css">
+</head>
+<body>
+<div id="header">
+		<div id="title2">員工管理系統</div>
+</div>
+<div id="navigater"></div>
+<div id="content">
+		<div id="queryAll">
+				<table width=400 align=center border=1>
+					<tr>
+		
+						<td>客戶名稱
+						<td>A商品數量
+						<td>B商品數量
+						<td>C商品數量
+						<td>銷售總額
+					<tr th:each="p:${session.L}">
+						<td th:text="${p.name}">
+						<td th:text="${p.a}">
+						<td th:text="${p.b}">
+						<td th:text="${p.c}">
+						<td th:text="${p.a}*100+
+								${p.b}*120+
+								${p.c}*150">
+				</table>
+		</div>
+</div>
+<div id="footer"></div>
+</body>
+</html>
